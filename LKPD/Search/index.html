@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Nama</title>
+</head>
+<body>
+    
+    <center>
+    <form id="searchForm">
+        <label for="searchInput">Masukkan Nama:</label>
+        <input type="text" id="searchInput" name="searchInput" required>
+        <button type="submit">Submit</button>
+    </form>
+ 
+    <p id="searchResult"></p>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Fungsinya untuk mencegah reload halaman setelah submit
+
+            const inputName = document.getElementById("searchInput").value;
+            const searchResult = document.getElementById("searchResult");
+
+            // Ini output
+            searchResult.innerText = "Mencari data: " + inputName;
+        });
+    </script>
+    </center>   
+
+</body>
+</html>

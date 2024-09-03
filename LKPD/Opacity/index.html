@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity</title>
+</head>
+<body>
+
+    <center>
+    <h1>Ubah Opacity</h1>
+    
+    <label for="image">Pilih Gambar:</label>
+    <select id="image">
+        <option value="img/hc1.jpeg">Gambar 1</option>
+        <option value="img/hc2.jpeg">Gambar 2</option>
+        <option value="img/hc3.jpeg">Gambar 3</option>
+    </select>
+
+    <label for="opacity">Pilih Opacity:</label>
+    <select id="opacity">
+        <option value="1">1</option>
+        <option value="0.5">0.5</option>
+        <option value="0.2">0.2</option>
+    </select>
+
+    <button onclick="updateImage()">Kirim</button>
+
+    <h2>Gambar Awal:</h2>
+    <img id="image-awal" src="img/hc1.jpeg" style="width:300px;">
+
+    <h2>Gambar Setelah Diubah:</h2>
+    <img id="image-akhir" src="img/hc1.jpeg" style="width:300px; opacity: 1;">
+    </center>
+
+    <script>
+        function updateImage() {
+            const imageSelect = document.getElementById("image");
+            const opacitySelect = document.getElementById("opacity");
+
+            const selectedImage = imageSelect.value;
+            const selectedOpacity = opacitySelect.value;
+
+            const changedImage = document.getElementById("image-akhir");
+            changedImage.src = selectedImage;
+
+            changedImage.style.opacity = selectedOpacity;
+        }
+    </script>
+</body>
+</html>

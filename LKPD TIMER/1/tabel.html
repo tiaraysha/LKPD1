@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 20px;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <table>
+        <th>No</th>
+        <th>Keterangan</th>
+        <th>Bersedia Membayar:</th>
+
+        <tr>
+            <td>1</td>
+            <td>Bersedia membayar <b>Dana Sumbangan Pembangunan (DSP)</b> sebesar <b>Rp 8.500.000</b> dengan mekanisme pembayaran Dana Sumbangan Pendidikan.</td>
+            <td><input type="radio">Lunas saat Daftar Ulang</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Bersedia membayar <b>Sumbangan Penyelenggaraan Pendidikan (SPP)</b> secara rutin setiap bulan sebesar <b>Rp 550.000</b> yang dibayarkan sebelum tanggal
+            10 setiap bulannya kecuali bulan Juli 2024</td>
+            <td><input type="checkbox"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">3</td>
+            <td><b>Pembayaran lainnya.</b><br> Setelah Putra/Putri kami keterima di SMK Wikrama Bogor, kami juga bersedia memberikan: <br>
+            a. Wakaf pembangunan Mesjid Al-Ikram <br></td>
+            <td>
+                <input type="radio">Rp 300.000<hr>
+                <input type="radio">Rp 500.000<hr>
+                <input type="radio">Rp 1.000.000<hr>
+                <input type="radio">Rp 2.000.000<hr>
+                <input type="radio">Rp 5.000.000<hr>
+                <input type="radio">> Rp 5.000.000 atau Rp <input type="number">
+            </td>
+        </tr>
+
+        <tr>
+            <td>b. <b>Zakat Infak dan Sodaqoh</b> secara rutin setiap bulan</td>
+            <td><input type="number" placeholder="Rp."></td>
+        </tr>
+    </table>
+</body>
+</html>

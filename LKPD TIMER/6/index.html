@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Nama</title>
+</head>
+<body>
+    <center>
+    <form id="form">
+    <label for="nama">Masukkan Nama:</label>
+    <input type="text" id="nama" placeholder="Search.." required>
+    <button type="submit" id="btn">Submit</button>
+    </form>
+
+    <p id="searchResult"></p>
+
+    <script>
+        document.getElementById("form").addEventListener("submit",function(event) {
+            event.preventDefault();
+
+            const result = document.getElementById("nama").value;
+            const searchResult = document.getElementById("searchResult");
+
+            searchResult.innerText = "Mencari data " + result; 
+        });
+    </script>
+    </center>
+</body>
+</html>

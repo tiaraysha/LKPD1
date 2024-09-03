@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+
+<style>
+    #hitungMundur {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    #btn {
+        background-color: rgb(65, 158, 41);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1rem;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+    }
+</style>
+<body>
+    <center>
+    <button id="btn">Munculkan Alert</button>
+    <div id="hitungMundur"></div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            let hitung = 5;
+            const hitungMundur = document.getElementById("hitungMundur");
+
+            const interval = setInterval(function() {
+                if (hitung > 0) {
+                    hitungMundur.innerText = "Danger! Alert akan tertutup dalam " + hitung;
+                    hitung--;
+                } else {
+                    hitungMundur.innerText = "";
+                    clearInterval(interval);
+                }
+            }, 1000);
+        });
+    </script>
+    </center>
+</body>
+</html>
